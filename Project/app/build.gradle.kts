@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.brandstofapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.brandstofapp"
@@ -24,6 +24,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        buildFeatures{
+            viewBinding = true
         }
     }
     compileOptions {
