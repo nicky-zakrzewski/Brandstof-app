@@ -6,4 +6,7 @@
     <string name="gasStation3">Dats 24</string>
     <string name="gasStation4">Shell</string>
     <string name="gasStation5">Lukoil</string>
+    <string name="gasStation6">Total</string>
+    <string name="gasStation7">Q8</string>
+    <string name="gasStation8">Gulf</string>
 </resources>

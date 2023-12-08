@@ -11,6 +11,9 @@ class Datasource {
             GasStation(R.string.gasStation3),
             GasStation(R.string.gasStation4),
             GasStation(R.string.gasStation5),
+            GasStation(R.string.gasStation6),
+            GasStation(R.string.gasStation7),
+            GasStation(R.string.gasStation8),
 
             )
     }
