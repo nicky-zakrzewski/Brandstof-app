@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">project2</string>
+
+    <string name="gasStation1">Esso</string>
+    <string name="gasStation2">Gabriëls</string>
+    <string name="gasStation3">Dats 24</string>
+    <string name="gasStation4">Shell</string>
+    <string name="gasStation5">Lukoil</string>
+</resources>
