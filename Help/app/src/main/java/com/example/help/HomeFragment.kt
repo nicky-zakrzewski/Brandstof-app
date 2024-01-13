@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class HomeFragment : Fragment() {
@@ -32,7 +34,22 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val spinner : Spinner = view.findViewById(R.id.fuelTypeSpinner)
-        val arrayAdapter = ArrayAdapter<String>(requireContext().applicationContext, android.R.layout.simple_spinner_dropdown_item)
+        val arrayAdapter = ArrayAdapter<String>(requireContext().applicationContext, android.R.layout.simple_spinner_dropdown_item, fuelTypes)
+        spinner.adapter = arrayAdapter
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                //Toast.makeText(requireContext().applicationContext, "Selected fuel type: "+fuelTypes[position], Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                Toast.makeText(requireContext().applicationContext, "No fuel type selected", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     //einde poging spinner

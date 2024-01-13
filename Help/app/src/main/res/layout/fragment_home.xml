@@ -8,8 +8,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/searchEditText"
@@ -22,15 +27,16 @@
             android:id="@+id/fuelTypeSpinner"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:layout_marginStart="8dp"
-            />
+            android:layout_marginStart="8dp" />
 
-        <Button
-            android:id="@+id/searchGasStationsButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Show" />
+    </LinearLayout>
 
+    <Button
+        android:id="@+id/searchGasStationsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show gas stations"
+        android:layout_marginTop="8dp" />
     </LinearLayout>
 
     <!-- RecyclerView for displaying card views -->
