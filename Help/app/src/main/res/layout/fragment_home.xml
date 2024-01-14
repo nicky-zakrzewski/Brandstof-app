@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
     <LinearLayout
@@ -43,8 +44,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gasStationsRecyclerView"
         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:spanCount="1"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_marginTop="56dp" />
+
+<!-- ORIGINAL
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gasStationsRecyclerView"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="56dp" />
+-->
 
 
 </FrameLayout>
