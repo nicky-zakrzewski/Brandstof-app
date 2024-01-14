@@ -39,7 +39,7 @@ class MockGasStationRepository : IGasStationRepository{
             fuelPrices = mutableMapOf("Euro95" to 1.264, "Diesel" to 1.984)
         ),
     )
-
+    /*
     override fun getAllGasStations(): List<GasStation> {
         return gasStations.toList()
     }
@@ -48,11 +48,20 @@ class MockGasStationRepository : IGasStationRepository{
         return gasStations.find { it.id == id }
     }
 
+
     override fun getGasStationsByCity(city: String): List<GasStation> {
         return gasStations.filter { it.city == city }.toList()
     }
-
+    */
     override fun getGasStationsByFuelType(fuelType: String): List<GasStation> {
         return gasStations.filter { it.fuelPrices.containsKey(fuelType) }.toList()
+    }
+    override fun getGasStationsByFuelTypeAndCity(selectedFuelType: String, city: String): List<GasStation> {
+        if (city.isEmpty()) {
+            return getGasStationsByFuelType(selectedFuelType)
+        }
+        return gasStations.filter { gasStation ->
+            gasStation.fuelPrices.containsKey(selectedFuelType) && gasStation.city == city
+        }
     }
 }
