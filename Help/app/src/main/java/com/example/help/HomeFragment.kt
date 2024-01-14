@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.help.databinding.ActivityMainBinding
 
 class HomeFragment : Fragment() {
     val fuelTypes = arrayOf("Euro95","Euro98","Diesel","LPG","CNG", "Red Diesel")
@@ -29,7 +30,7 @@ class HomeFragment : Fragment() {
         return view
     }
 
-    //poging spinner
+    //Spinner
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
