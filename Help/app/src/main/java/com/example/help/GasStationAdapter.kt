@@ -31,7 +31,7 @@ class GasStationAdapter(
         when (gasStation.name) {
             "Shell" -> image = R.drawable.shell
             "Esso" -> image = R.drawable.esso
-            "Gabriels" -> image = R.drawable.gabriels
+            "Gabriëls" -> image = R.drawable.gabriels
             "Gulf" -> image = R.drawable.gulf
             "Lukoil" -> image = R.drawable.lukoil
             "Q8" -> image = R.drawable.q8

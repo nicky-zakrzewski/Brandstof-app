@@ -29,7 +29,7 @@ class MockGasStationRepository : IGasStationRepository{
             name = "Total",
             city = "Diepenbeek",
             address = "Agoralaan 99",
-            fuelPrices = mutableMapOf("Euro95" to 1.264, "Diesel" to 1.984, "Euro98" to 1.748, "CNG" to 0.956,"LPG" to 0.538)
+            fuelPrices = mutableMapOf("Euro95" to 1.774, "Diesel" to 1.984, "Euro98" to 1.748, "CNG" to 0.956,"LPG" to 0.538, "Red Diesel" to 1.452)
         ),
         GasStation(
             id = 5,
@@ -38,30 +38,44 @@ class MockGasStationRepository : IGasStationRepository{
             address = "Europalaan 15",
             fuelPrices = mutableMapOf("Euro95" to 1.264, "Diesel" to 1.984)
         ),
+        GasStation(
+            id = 6,
+            name = "Dats24",
+            city = "Opgrimbie",
+            address = "Sint Martinus straat 75",
+            fuelPrices = mutableMapOf("CNG" to 0.879, "LPG" to 0.511)
+        ),
+        GasStation(
+            id = 7,
+            name = "Esso",
+            city = "Smeermaas",
+            address = "Drukstraat 15",
+            fuelPrices = mutableMapOf("Euro95" to 1.964, "Diesel" to 1.984, "LPG" to 0.631)
+        ),
+        GasStation(
+            id = 8,
+            name = "Gabriëls",
+            city = "Rekem",
+            address = "Steenweg 215",
+            fuelPrices = mutableMapOf("Euro95" to 1.684, "Diesel" to 1.984, "Red Diesel" to 1.456)
+        ),
+        GasStation(
+            id = 9,
+            name = "Gulf",
+            city = "Kotem",
+            address = "Hegstraat 23a",
+            fuelPrices = mutableMapOf("Euro95" to 1.387, "Diesel" to 1.984, "Red Diesel" to 1.341)
+        ),
+        GasStation(
+            id = 10,
+            name = "Bp",
+            city = "Genk",
+            address = "Stationstraat 5",
+            fuelPrices = mutableMapOf("Euro95" to 1.984, "Diesel" to 2.058, "Euro98" to 2.145)
+        ),
+
     )
-    /*
     override fun getAllGasStations(): List<GasStation> {
-        return gasStations.toList()
-    }
-
-    override fun getGasStationById(id: Int): GasStation? {
-        return gasStations.find { it.id == id }
-    }
-
-
-    override fun getGasStationsByCity(city: String): List<GasStation> {
-        return gasStations.filter { it.city == city }.toList()
-    }
-    */
-    override fun getGasStationsByFuelType(fuelType: String): List<GasStation> {
-        return gasStations.filter { it.fuelPrices.containsKey(fuelType) }.toList()
-    }
-    override fun getGasStationsByFuelTypeAndCity(selectedFuelType: String, city: String): List<GasStation> {
-        if (city.isEmpty()) {
-            return getGasStationsByFuelType(selectedFuelType)
-        }
-        return gasStations.filter { gasStation ->
-            gasStation.fuelPrices.containsKey(selectedFuelType) && gasStation.city == city
-        }
+        return gasStations;
     }
 }
