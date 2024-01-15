@@ -45,11 +45,16 @@ class GasStationAdapter(
         //#ENDREGION
 
         holder.logoImageView.setImageResource(image)
-        holder.nameTextView.text = gasStation.name
+        holder.nameTextView.text = gasStation.city
 
         // Toon de prijs van het geselecteerde brandstoftype
         val fuelPrice = gasStation.fuelPrices[selectedFuelType]
-        holder.priceTextView.text = "€$fuelPrice"
+        if (selectedFuelType == "CNG"){
+            holder.priceTextView.text = "€$fuelPrice/Kg"
+        }
+        else{
+            holder.priceTextView.text = "€$fuelPrice/L"
+        }
     }
 
     override fun getItemCount(): Int {

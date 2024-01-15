@@ -13,7 +13,6 @@
         android:orientation="horizontal"
         android:padding="16dp">
 
-        <!-- Logo (links) -->
         <ImageView
             android:id="@+id/gasStationLogoImageView"
             android:layout_width="50dp"
@@ -22,7 +21,6 @@
             android:scaleType="fitCenter"
             android:layout_gravity="center_vertical"/>
 
-        <!-- Naam van het tankstation (in het midden) -->
         <TextView
             android:id="@+id/gasStationNameTextView"
             android:layout_width="0dp"
@@ -34,7 +32,6 @@
             android:gravity="center_horizontal"
             android:layout_marginStart="16dp"/>
 
-        <!-- Prijs van het gevraagde brandstoftype (rechts) -->
         <TextView
             android:id="@+id/fuelPriceTextView"
             android:layout_width="wrap_content"

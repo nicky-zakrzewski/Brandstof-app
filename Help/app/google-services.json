@@ -2,7 +2,8 @@
   "project_info": {
     "project_number": "591350662392",
     "project_id": "brandstof-app-56919",
-    "storage_bucket": "brandstof-app-56919.appspot.com"
+    "storage_bucket": "brandstof-app-56919.appspot.com",
+    "firebase_url": "https://brandstof-app-56919-default-rtdb.europe-west1.firebasedatabase.app/"
   },
   "client": [
     {

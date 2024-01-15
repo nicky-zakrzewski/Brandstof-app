@@ -1,12 +1,7 @@
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+
 import androidx.lifecycle.ViewModel
 import com.example.help.GasStation
-import com.example.help.HomeFragment
 import com.example.help.IGasStationRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class GasStationViewModel(private val gasStationRepository: IGasStationRepository) : ViewModel() {
 
@@ -26,3 +21,4 @@ class GasStationViewModel(private val gasStationRepository: IGasStationRepositor
         }.toList().sortedBy { it.fuelPrices[selectedFuelType] }
     }
 }
+
