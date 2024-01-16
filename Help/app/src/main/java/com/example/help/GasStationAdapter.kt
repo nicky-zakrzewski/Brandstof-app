@@ -14,7 +14,6 @@ class GasStationAdapter(
 
     fun setSelectedFuelType(fuelType: String) {
         selectedFuelType = fuelType
-        //notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GasStationViewHolder {
@@ -25,7 +24,6 @@ class GasStationAdapter(
 
     override fun onBindViewHolder(holder: GasStationViewHolder, position: Int) {
         val gasStation = gasStations[position]
-
         //#REGION switch case image
         var image : Int
         when (gasStation.name) {
@@ -43,11 +41,9 @@ class GasStationAdapter(
             }
         }
         //#ENDREGION
-
         holder.logoImageView.setImageResource(image)
         holder.nameTextView.text = gasStation.city
 
-        // Toon de prijs van het geselecteerde brandstoftype
         val fuelPrice = gasStation.fuelPrices[selectedFuelType]
         if (selectedFuelType == "CNG"){
             holder.priceTextView.text = "€$fuelPrice/Kg"
@@ -57,12 +53,12 @@ class GasStationAdapter(
         }
     }
 
-    override fun getItemCount(): Int {
-        return gasStations.size
-    }
-
     fun setData(newGasStations: List<GasStation>) {
         gasStations = newGasStations
         notifyDataSetChanged()
+    }
+
+    override fun getItemCount(): Int {
+        return gasStations.size
     }
 }

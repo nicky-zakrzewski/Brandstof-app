@@ -24,7 +24,7 @@ class GasStationRepository : IGasStationRepository {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Behandel annulering of fouten hier
+
             }
         })
     }
